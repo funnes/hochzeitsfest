@@ -28,6 +28,7 @@ is-invited-to-hike = true
 name = "Mario und Celina"
 is-invited-by-paper = true
 is-invited-to-hike = true
+attending = ["aFTERNOON", "dINNER", "hIKE"]
 [[guests]]
 name = "Visu und Nina"
 is-invited-by-paper = true
