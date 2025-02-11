@@ -9,25 +9,29 @@ fn values_are_valid() {
             // guest has not decided yet
             continue;
         };
-        let attending = match attending.as_array() {
-            Some(array) => array.clone(),
-            None => attending
-                .as_table()
-                .unwrap()
-                .into_iter()
-                .flat_map(|(_subguest, subattending)| subattending.as_array().unwrap())
-                .cloned()
-                .collect(),
-        };
 
         let name = guest["name"].as_str().unwrap();
 
-        for val in attending {
-            let val = val.as_str().unwrap();
+        let sub_guests: Vec<&str> = name.split(" und ").flat_map(|g| g.split(", ")).collect();
 
+        fn validate_attending(name: &str, attending: &[toml::Value]) {
             static ALLOWED_VALUES: &[&str] = &["afternoon", "dinner", "hike"];
+            for val in attending {
+                let val = val.as_str().unwrap();
+                assert!(ALLOWED_VALUES.contains(&val), "{name} violated the law");
+            }
+        }
 
-            assert!(ALLOWED_VALUES.contains(&val), "{name} violated the law");
+        if sub_guests.len() > 1 {
+            for sub_guest in attending.as_table().unwrap() {
+                let name = sub_guest.0.as_str();
+                assert!(sub_guests.contains(&name), "unexpected guest: {name}");
+                let attending = sub_guest.1.as_array().unwrap();
+                validate_attending(name, attending);
+            }
+        } else {
+            let attending = attending.as_array().unwrap();
+            validate_attending(name, attending);
         }
     }
 }

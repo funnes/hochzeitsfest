@@ -1,7 +1,7 @@
 [[guests]]
 name = "Christine und Stephan"
-attending.christine = ["afternoon", "dinner"]
-attending.stephan = ["afternoon"]
+attending.Christine = ["afternoon", "dinner"]
+attending.Stephan = ["afternoon"]
 is-invited-by-paper = true
 is-invited-to-hike = true
 [[guests]]
@@ -28,7 +28,8 @@ is-invited-to-hike = true
 name = "Mario und Celina"
 is-invited-by-paper = true
 is-invited-to-hike = true
-attending = ["afternoon", "dinner", "hike"]
+attending.Mario = ["afternoon", "dinner", "hike"]
+attending.Celina = ["afternoon", "dinner", "hike"]
 [[guests]]
 name = "Visu und Nina"
 is-invited-by-paper = true

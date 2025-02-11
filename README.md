@@ -9,3 +9,12 @@ Hier ein Beispiel:
 
 Der Wert von `attending` muss eine Teilmenge von `["afternoon", "dinner", "hike"]` sein.
 Setze `attending` auf `[]` um die Einladung abzulehnen.
+
+Wenn die Einladung mehrere Personen betrifft muss der Eintrag so aussehen:
+
+``` diff
+ [[guests]]
+ name = "Foo and Bar"
++attending.Foo = ["afternoon", "dinner"]
++attending.Bar = ["afternoon"]
+```
