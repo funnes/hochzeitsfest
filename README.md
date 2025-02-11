@@ -1,3 +1,5 @@
+## Einladung annehmen oder ablehnen
+
 Um die Einladung anzunehmen oder abzulehnen, editiere die `gästeliste.toml` Datei und eröffne einen Pull Request.
 Hier ein Beispiel:
 
@@ -18,3 +20,7 @@ Wenn die Einladung mehrere Personen betrifft muss der Eintrag so aussehen:
 +attending.Foo = ["afternoon", "dinner"]
 +attending.Bar = ["afternoon"]
 ```
+
+## Commit Aussage
+
+Hochzeiten sind freudige Feiern voller Liebe und Glück – und genau dieses Gefühl sollte sich auch in deinen Commits widerspiegeln! Deshalb musst du mindestens ein `:partying_face:` Emoji in deine Commit Aussage integrieren.

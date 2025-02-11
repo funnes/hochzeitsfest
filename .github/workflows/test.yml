@@ -14,6 +14,9 @@ jobs:
 
       - uses: Swatinem/rust-cache@v2
 
+      - name: "Check commit message for :partying_face: emoji"
+        run: git log -1 --pretty=%B | grep -q ":partying_face:"
+
       - name: cargo test
         run: cargo test --all-features
 
