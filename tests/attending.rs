@@ -21,11 +21,6 @@ fn values_are_valid() {
         };
 
         let name = guest["name"].as_str().unwrap();
-        if name == "Mario und Celina" {
-            // exception because they have an excuse:
-            // https://github.com/johannesneyer/hochzeitsfest/pull/4#discussion_r1949817907
-            continue;
-        }
 
         for val in attending {
             let val = val.as_str().unwrap();
