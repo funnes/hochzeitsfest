@@ -46,6 +46,8 @@ is-invited-to-hike = true
 name = "Fabian und Anja"
 is-invited-by-paper = true
 is-invited-to-hike = true
+attending.Fabian = ["afternoon", "dinner"]
+attending.Anja = ["afternoon", "dinner"]
 [[guests]]
 name = "Remo"
 attending = ["afternoon", "dinner", "hike"]
