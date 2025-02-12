@@ -18,7 +18,7 @@ jobs:
         run: git log -1 --pretty=%B | grep -qE "(:partying_face:|🥳)"
 
       - name: Prevent excessively long commit messages
-        run: (( "$(git log -1 --pretty=%B | wc -c)" <= 50 ))
+        run: (( "$(git log -1 --pretty=%s | wc -c)" <= 50 ))
 
       - name: cargo test
         run: cargo test --all-features
