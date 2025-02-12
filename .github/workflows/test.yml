@@ -14,11 +14,8 @@ jobs:
 
       - uses: Swatinem/rust-cache@v2
 
-      - name: "Check commit message for :partying_face: emoji"
-        run: git log -1 --pretty=%B | grep -qE "(:partying_face:|🥳)"
-
-      - name: Prevent excessively long commit messages
-        run: (( "$(git log -1 --pretty=%s | wc -c)" <= 50 ))
+      - name: "Check commit message conventions"
+        run: ./devel/scripts/check_commit_message.sh
 
       - name: cargo test
         run: cargo test --all-features

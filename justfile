@@ -8,3 +8,6 @@ _compile file:
 
 clean:
 	rm -rf build
+
+check-commit-message:
+	devel/scripts/check_commit_message.sh
