@@ -1,4 +1,8 @@
-on: [push]
+on:
+  pull_request:
+  push:
+    branches:
+      - main
 
 env:
   CARGO_TERM_COLOR: always
@@ -12,7 +16,9 @@ jobs:
       - uses: Swatinem/rust-cache@v2
 
       - name: "Check commit message conventions"
-        run: ./devel/scripts/check_commit_message.sh
+        # This "pull_request" event payload doens't exist on "push" events, but
+        # in that case, HEAD already points to the correct commit to check.
+        run: ./devel/scripts/check_commit_message.sh ${{ github.event.pull_request.head.sha }}
 
       - name: cargo test
         run: cargo test --all-features
