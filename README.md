@@ -23,4 +23,4 @@ Wenn die Einladung mehrere Personen betrifft muss der Eintrag so aussehen:
 
 ## Commit Aussage
 
-Hochzeiten sind freudige Feiern voller Liebe und Glück – und genau dieses Gefühl sollte sich auch in deinen Commits widerspiegeln! Deshalb musst du mindestens ein `:partying_face:` Emoji in deine Commit Aussage integrieren.
+Hochzeiten sind freudige Feiern voller Liebe und Glück – und genau dieses Gefühl sollte sich auch in deinen Commits widerspiegeln! Deshalb musst du mindestens ein 🥳 Emoji in deine Commit Aussage integrieren.
