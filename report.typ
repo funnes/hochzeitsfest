@@ -98,3 +98,29 @@
   guest
   "\n"
 }
+
+#place(
+  bottom,
+  scope: "parent",
+  float: true,
+)[
+  #let undecided = (
+    guests
+      .map(guest => {
+        let attending = guest.at("attending", default: none)
+        if attending != none {
+          return ()
+        }
+        guest.at("name").split(regex("(,? und |,\\s?)"))
+      })
+      .flatten()
+  )
+
+  #if undecided.len() != 0 {
+    [
+      == Undecided
+
+      #undecided.join(", ")
+    ]
+  }
+]
