@@ -1,6 +1,9 @@
 use std::collections::HashMap;
 
-use serde::{de::Visitor, Deserialize, Serialize};
+use serde::{
+    de::{self, Visitor},
+    Deserialize, Deserializer, Serialize,
+};
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
 pub struct GuestList {
@@ -19,8 +22,8 @@ pub struct Guest {
 #[derive(Debug, Clone, PartialEq, Eq, Serialize)]
 #[serde(untagged)]
 pub enum AttendingField {
-    Single(Vec<AttendingValue>),
-    Table(HashMap<String, Vec<AttendingValue>>),
+    Single(AttendingValueList),
+    Table(HashMap<String, AttendingValueList>),
 }
 
 impl<'de> Deserialize<'de> for AttendingField {
@@ -41,15 +44,13 @@ impl<'de> Visitor<'de> for AttendingFieldVisitor {
         formatter.write_str("a list of AttendingValue or a map of strings (names of sub-attendees) to list of AttendingValue")
     }
 
-    fn visit_seq<A>(self, mut seq: A) -> Result<Self::Value, A::Error>
+    fn visit_seq<A>(self, seq: A) -> Result<Self::Value, A::Error>
     where
         A: serde::de::SeqAccess<'de>,
     {
-        let mut v = Vec::new();
-        while let Some(elem) = seq.next_element()? {
-            v.push(elem);
-        }
-        Ok(AttendingField::Single(v))
+        AttendingValueListVisitor
+            .visit_seq(seq)
+            .map(AttendingField::Single)
     }
 
     fn visit_map<A>(self, mut map: A) -> Result<Self::Value, A::Error>
@@ -61,6 +62,44 @@ impl<'de> Visitor<'de> for AttendingFieldVisitor {
             m.insert(name, attending);
         }
         Ok(AttendingField::Table(m))
+    }
+}
+
+/// Wrapper type to provide a custom Deserialize implementation that prevents
+/// duplicate AttendingValue
+#[derive(Debug, Clone, PartialEq, Eq, Serialize)]
+pub struct AttendingValueList(Vec<AttendingValue>);
+
+impl<'de> Deserialize<'de> for AttendingValueList {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: Deserializer<'de>,
+    {
+        deserializer.deserialize_seq(AttendingValueListVisitor)
+    }
+}
+
+struct AttendingValueListVisitor;
+
+impl<'de> Visitor<'de> for AttendingValueListVisitor {
+    type Value = AttendingValueList;
+
+    fn expecting(&self, formatter: &mut std::fmt::Formatter) -> std::fmt::Result {
+        formatter.write_str("a list of AttendingValue")
+    }
+
+    fn visit_seq<A>(self, mut seq: A) -> Result<Self::Value, A::Error>
+    where
+        A: serde::de::SeqAccess<'de>,
+    {
+        let mut v = Vec::new();
+        while let Some(elem) = seq.next_element()? {
+            if v.contains(&elem) {
+                return Err(de::Error::custom("duplicate attending value"));
+            }
+            v.push(elem);
+        }
+        Ok(AttendingValueList(v))
     }
 }
 
