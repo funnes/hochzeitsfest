@@ -36,10 +36,7 @@
 
   == Anmeldung
 
-  Bitte gebt uns bis *2025-03-14* Bescheid, ob ihr dabei seid – entweder direkt bei uns (#link("tel:+41 79 884 75 55")) oder per Pull Request auf GitHub.
-  Lasst es uns bitte wissen, falls ihr am Abendessen nicht teilnehmen könnt.
-
-  #image("img/github.svg", height: qrheight)
+  Bitte gebt uns (#link("tel:+41 79 884 75 55")) bis *2025-03-14* Bescheid, ob ihr beim Apéro dabei seid.\
 
   == Trauzeugen
 
@@ -84,7 +81,7 @@
 
 #let guests = guests.filter(g => g.is-invited-by-paper)
 
-#front(guests.first())
+#front(guests.last())
 #back
 
 // prepare for printing
