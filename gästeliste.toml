@@ -20,6 +20,7 @@ is-invited-by-paper = true
 is-invited-to-hike = false
 [[guests]]
 name = "Arno"
+attending = ["afternoon", "dinner", "hike"]
 is-invited-by-paper = true
 is-invited-to-hike = true
 [[guests]]
