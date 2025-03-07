@@ -44,6 +44,7 @@ attending.Nina = ["afternoon", "dinner"]
 name = "David"
 is-invited-by-paper = true
 is-invited-to-hike = true
+attending.David = ["afternoon", "dinner", "hike"]
 [[guests]]
 name = "Lea"
 is-invited-by-paper = true
