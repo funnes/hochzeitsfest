@@ -1,6 +1,6 @@
 [[guests]]
 name = "Christine und Stephan"
-attending.Christine = ["afternoon", "dinner"]
+attending.Christine = ["afternoon", "dinner", "hike"]
 attending.Stephan = ["afternoon"]
 is-invited-by-paper = true
 is-invited-to-hike = true
@@ -8,6 +8,8 @@ is-invited-to-hike = true
 name = "Marina und Timo"
 is-invited-by-paper = true
 is-invited-to-hike = true
+attending.Marina = ["afternoon", "dinner", "hike"]
+attending.Timo = ["afternoon", "dinner", "hike"]
 [[guests]]
 name = "Martin und Andrea"
 is-invited-by-paper = true
@@ -18,6 +20,8 @@ attending.Andrea = ["afternoon", "dinner"]
 name = "Manfred und Margit"
 is-invited-by-paper = true
 is-invited-to-hike = false
+attending.Manfred = ["afternoon", "dinner"]
+attending.Margit = ["afternoon", "dinner"]
 [[guests]]
 name = "Arno"
 attending = ["afternoon", "dinner", "hike"]
@@ -69,6 +73,7 @@ is-invited-to-hike = true
 name = "Lukas"
 is-invited-by-paper = false
 is-invited-to-hike = true
+attending = ["afternoon", "dinner", "hike"]
 [[guests]]
 name = "Janosch"
 is-invited-by-paper = true
@@ -81,6 +86,7 @@ is-invited-to-hike = true
 name = "Simon"
 is-invited-by-paper = true
 is-invited-to-hike = false
+attending = ["afternoon", "dinner"]
 # Petra
 [[guests]]
 name = "Regula und Jürg"
@@ -97,6 +103,10 @@ attending = []
 name = "Nick, Emma, Lina und Kelian"
 is-invited-by-paper = true
 is-invited-to-hike = true
+attending.Nick = ["afternoon", "dinner", "hike"]
+attending.Emma = ["afternoon", "dinner", "hike"]
+attending.Lina = []
+attending.Kelian = []
 [[guests]]
 name = "Kaj und Nadine"
 is-invited-by-paper = true
@@ -129,10 +139,14 @@ attending.Jonathan = ["afternoon", "dinner"]
 name="Jorim und Joana"
 is-invited-by-paper = true
 is-invited-to-hike = false
+attending.Jorim = ["afternoon", "dinner"]
+attending.Joana = ["afternoon", "dinner"]
 [[guests]]
 name="Kurt und Brigitte"
 is-invited-by-paper = true
 is-invited-to-hike = false
+attending.Kurt = ["afternoon", "dinner"]
+attending.Brigitte = ["afternoon", "dinner"]
 [[guests]]
 name="Nathanja und Nathanael"
 is-invited-by-paper = true
@@ -147,6 +161,7 @@ attending.Patrick = ["afternoon", "dinner"]
 name="Tabea"
 is-invited-by-paper = true
 is-invited-to-hike = false
+attending = []
 [[guests]]
 name="Christian"
 is-invited-by-paper = true
@@ -167,6 +182,8 @@ attending.Surat = ["afternoon", "dinner"]
 name="Kaspar und Heidi"
 is-invited-by-paper = true
 is-invited-to-hike = false
+attending.Kaspar = ["afternoon", "dinner"]
+attending.Heidi = ["afternoon", "dinner"]
 [[guests]]
 name="Barbara, Res, Maik und Neil"
 is-invited-by-paper = true
@@ -179,10 +196,14 @@ attending.Neil = ["afternoon", "dinner"]
 name="Raneem und David"
 is-invited-by-paper = true
 is-invited-to-hike = true
+attending.Raneem = ["afternoon", "dinner"]
+attending.David = ["afternoon", "dinner"]
 [[guests]]
 name="Mirjam und Jovin"
 is-invited-by-paper = true
 is-invited-to-hike = true
+attending.Mirjam = ["afternoon", "dinner", "hike"]
+attending.Jovin = ["afternoon", "dinner"]
 [[guests]]
 name="Daniel"
 is-invited-by-paper = true
@@ -191,11 +212,15 @@ is-invited-to-hike = true
 name="Jasmine und Marcel"
 is-invited-by-paper = true
 is-invited-to-hike = true
+attending.Jasmine = ["afternoon", "dinner"]
+attending.Marcel = ["afternoon", "dinner"]
 [[guests]]
 name="Camilla"
 is-invited-by-paper = true
 is-invited-to-hike = true
+attending = ["afternoon", "dinner", "hike"]
 [[guests]]
 name="Turnverein Pflanzschule"
 is-invited-by-paper = true
 is-invited-to-hike = false
+attending = ["afternoon"]
