@@ -78,6 +78,7 @@ attending = ["afternoon", "dinner", "hike"]
 name = "Janosch"
 is-invited-by-paper = true
 is-invited-to-hike = true
+attending = ["hike"]
 [[guests]]
 name = "Aaron"
 is-invited-by-paper = true
