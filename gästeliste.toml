@@ -83,6 +83,7 @@ attending = ["hike"]
 name = "Aaron"
 is-invited-by-paper = true
 is-invited-to-hike = true
+attending.Aaron = ["hike"]
 [[guests]]
 name = "Simon"
 is-invited-by-paper = true
