@@ -1,7 +1,7 @@
 [[guests]]
 name = "Christine und Stephan"
 attending.Christine = ["afternoon", "dinner", "hike"]
-attending.Stephan = ["afternoon"]
+attending.Stephan = ["afternoon", "dinner"]
 is-invited-by-paper = true
 is-invited-to-hike = true
 [[guests]]
