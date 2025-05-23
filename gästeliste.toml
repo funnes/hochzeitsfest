@@ -29,7 +29,7 @@ is-invited-by-paper = true
 is-invited-to-hike = true
 [[guests]]
 name = "Islam"
-attending = ["afternoon", "dinner"]
+attending = []
 is-invited-by-paper = true
 is-invited-to-hike = true
 [[guests]]
