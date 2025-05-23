@@ -241,3 +241,8 @@ name="Turnverein Pflanzschule"
 is-invited-by-paper = true
 is-invited-to-hike = false
 attending = ["afternoon"]
+[[guests]]
+name="Sina"
+is-invited-by-paper = false
+is-invited-to-hike = false
+attending = ["afternoon", "dinner"]
