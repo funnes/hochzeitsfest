@@ -205,7 +205,7 @@ is-invited-by-paper = true
 is-invited-to-hike = true
 attending.Barbara = ["afternoon", "dinner"]
 attending.Res = ["afternoon", "dinner"]
-attending.Maik = ["afternoon", "dinner"]
+attending.Maik = []
 attending.Neil = ["afternoon", "dinner"]
 [[guests]]
 name="Raneem und David"
