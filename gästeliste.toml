@@ -14,8 +14,8 @@ attending.Timo = ["afternoon", "dinner", "hike"]
 name = "Martin und Andrea"
 is-invited-by-paper = true
 is-invited-to-hike = false
-attending.Martin = ["afternoon", "dinner"]
-attending.Andrea = ["afternoon", "dinner"]
+attending.Martin = ["afternoon"]
+attending.Andrea = ["afternoon"]
 [[guests]]
 name = "Manfred und Margit"
 is-invited-by-paper = true
