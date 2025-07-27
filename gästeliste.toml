@@ -24,7 +24,7 @@ attending.Manfred = ["afternoon", "dinner"]
 attending.Margit = ["afternoon", "dinner"]
 [[guests]]
 name = "Arno"
-attending = ["afternoon", "dinner", "hike"]
+attending = ["afternoon", "dinner"]
 is-invited-by-paper = true
 is-invited-to-hike = true
 [[guests]]
