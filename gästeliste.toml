@@ -106,8 +106,8 @@ attending = []
 name = "Nick, Emma, Lina und Kelian"
 is-invited-by-paper = true
 is-invited-to-hike = true
-attending.Nick = ["afternoon", "dinner", "hike"]
-attending.Emma = ["afternoon", "dinner", "hike"]
+attending.Nick = ["afternoon", "dinner"]
+attending.Emma = ["afternoon", "dinner"]
 attending.Lina = []
 attending.Kelian = []
 [[guests]]
