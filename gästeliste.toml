@@ -185,8 +185,8 @@ attending = []
 name="Adina und Roman"
 is-invited-by-paper = true
 is-invited-to-hike = true
-attending.Adina = ["afternoon", "dinner", "hike"]
-attending.Roman = ["afternoon", "dinner", "hike"]
+attending.Adina = ["afternoon", "dinner"]
+attending.Roman = ["afternoon", "dinner"]
 [[guests]]
 name="Heiner und Surat"
 is-invited-by-paper = true
