@@ -126,7 +126,7 @@ attending.Prisca = ["afternoon", "dinner"]
 name="Katharina, Irina und Xenia"
 is-invited-by-paper = true
 is-invited-to-hike = true
-attending.Katharina = ["afternoon", "dinner", "hike"]
+attending.Katharina = ["afternoon", "dinner"]
 attending.Irina = []
 attending.Xenia = []
 [[guests]]
