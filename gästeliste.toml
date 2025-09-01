@@ -217,7 +217,7 @@ attending.David = ["afternoon", "dinner"]
 name="Mirjam und Jovin"
 is-invited-by-paper = true
 is-invited-to-hike = true
-attending.Mirjam = ["afternoon", "dinner", "hike"]
+attending.Mirjam = ["afternoon", "dinner"]
 attending.Jovin = ["afternoon", "dinner"]
 [[guests]]
 name="Daniel und Gina"
