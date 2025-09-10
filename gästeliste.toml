@@ -9,7 +9,7 @@ name = "Marina und Timo"
 is-invited-by-paper = true
 is-invited-to-hike = true
 attending.Marina = ["afternoon", "dinner", "hike"]
-attending.Timo = ["afternoon", "dinner", "hike"]
+attending.Timo = ["afternoon", "dinner"]
 [[guests]]
 name = "Martin und Andrea"
 is-invited-by-paper = true
